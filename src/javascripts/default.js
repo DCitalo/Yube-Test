@@ -3,5 +3,6 @@ app.controller('myCtrl', function($scope, $http) {
     $http.get("https://jsonplaceholder.typicode.com/posts")
     .then(function(response) {
         $scope.Data = response.data;
+        $scope.DataLength = response.data.length;
     });
 })
