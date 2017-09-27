@@ -8,40 +8,28 @@
     <link rel="stylesheet" href="stylesheets/style.css" media="all">
   </head>
   <body>
+
 	<div class="container">
-	  <div class="panel panel-default">
-	    <div class="panel-body">
+
 	      <div class="col-lg-12">
-	          <table class="table table-bordered table-striped" ng-controller="myCtrl">
+	          <table id="TablePost" class="table table-bordered table-striped" ng-controller="myCtrl">
 	            <tr>
-	              <th>ID</th>
-	              <th>UserID</th>
-	              <th>Title</th>
-	              <th>Body</th>
+	              <th class="text-center">ID</th>
+	              <th class="text-center">UserID</th>
+	              <th class="text-center">Title</th>
+	              <th class="text-center">Body</th>
 	            </tr>
-	            <tr>
-	              <th>{{Data}}</th>
-	              <th></th>
-	              <th></th>
-	              <th></th>
-	            </tr>
-	            <tr>
-	              <th></th>
-	              <th></th>
-	              <th></th>
-	              <th></th>
-	            </tr>
-	            <tr>
-	              <th></th>
-	              <th></th>
-	              <th></th>
-	              <th></th>
+	            <tr ng-repeat="item in Data">
+	              <td>{{ item.id }}</td>
+	              <td>{{ item.userId }}</td>
+	              <td>{{ item.title }}</td>
+	              <td>{{ item.body }}</td>
 	            </tr>
 	          </table>
 	      </div>
-	    </div>
-	  </div>
+	      
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="javascripts/default.js"></script> 
 </html>
